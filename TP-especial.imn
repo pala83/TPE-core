@@ -12,8 +12,8 @@ node n1 {
 	!
     }
     canvas c1
-    iconcoords {182.0 189.0}
-    labelcoords {182.0 221.0}
+    iconcoords {146.0 207.0}
+    labelcoords {146.0 239.0}
     interface-peer {eth0 n6}
     interface-peer {eth1 n10}
 }
@@ -32,8 +32,8 @@ node n2 {
 	!
     }
     canvas c1
-    iconcoords {372.0 249.0}
-    labelcoords {372.0 281.0}
+    iconcoords {358.0 272.0}
+    labelcoords {358.0 304.0}
     interface-peer {eth0 n10}
     interface-peer {eth1 n13}
 }
@@ -52,8 +52,8 @@ node n3 {
 	!
     }
     canvas c1
-    iconcoords {622.0 246.0}
-    labelcoords {622.0 278.0}
+    iconcoords {635.0 272.0}
+    labelcoords {635.0 304.0}
     interface-peer {eth0 n10}
     interface-peer {eth1 n13}
 }
@@ -78,8 +78,8 @@ node n4 {
 	!
     }
     canvas c1
-    iconcoords {688.0 305.0}
-    labelcoords {688.0 337.0}
+    iconcoords {649.0 383.0}
+    labelcoords {649.0 415.0}
     interface-peer {eth0 n13}
     interface-peer {eth1 n22}
     interface-peer {eth2 n23}
@@ -106,8 +106,8 @@ node n5 {
 	!
     }
     canvas c1
-    iconcoords {137.0 309.0}
-    labelcoords {137.0 341.0}
+    iconcoords {448.0 404.0}
+    labelcoords {448.0 436.0}
     interface-peer {eth0 n13}
     interface-peer {eth1 n14}
     interface-peer {eth2 n16}
@@ -128,8 +128,8 @@ node n6 {
 	!
     }
     canvas c1
-    iconcoords {182.0 87.0}
-    labelcoords {182.0 119.0}
+    iconcoords {155.66666666666669 64.66666666666666}
+    labelcoords {155.66666666666669 96.66666666666667}
     interface-peer {eth0 n7}
     interface-peer {eth1 n1}
 }
@@ -148,8 +148,8 @@ node n7 {
 	!
     }
     canvas c1
-    iconcoords {440.0 88.0}
-    labelcoords {440.0 120.0}
+    iconcoords {396.0 66.0}
+    labelcoords {396.0 98.0}
     interface-peer {eth0 n9}
     interface-peer {eth1 n6}
 }
@@ -165,8 +165,8 @@ node n8 {
 	!
     }
     canvas c1
-    iconcoords {696.0 89.0}
-    labelcoords {696.0 121.0}
+    iconcoords {773.0 67.0}
+    labelcoords {773.0 99.0}
     interface-peer {eth0 n9}
 }
 
@@ -196,8 +196,8 @@ node n9 {
 	}
     }
     canvas c1
-    iconcoords {582.0 84.0}
-    labelcoords {582.0 116.0}
+    iconcoords {575.0 66.0}
+    labelcoords {575.0 98.0}
     interface-peer {e0 n7}
     interface-peer {e1 n8}
 }
@@ -209,8 +209,8 @@ node n10 {
 	!
     }
     canvas c1
-    iconcoords {463.0 189.0}
-    labelcoords {463.0 213.0}
+    iconcoords {494.0 207.0}
+    labelcoords {494.0 231.0}
     interface-peer {e0 n1}
     interface-peer {e1 n11}
     interface-peer {e2 n12}
@@ -229,8 +229,8 @@ node n11 {
 	!
     }
     canvas c1
-    iconcoords {643.0 157.0}
-    labelcoords {643.0 189.0}
+    iconcoords {654.0 139.0}
+    labelcoords {654.0 171.0}
     interface-peer {eth0 n10}
 }
 
@@ -245,8 +245,8 @@ node n12 {
 	!
     }
     canvas c1
-    iconcoords {776.0 224.0}
-    labelcoords {776.0 256.0}
+    iconcoords {715.0 204.0}
+    labelcoords {715.0 236.0}
     interface-peer {eth0 n10}
 }
 
@@ -257,8 +257,8 @@ node n13 {
 	!
     }
     canvas c1
-    iconcoords {479.0 310.0}
-    labelcoords {479.0 334.0}
+    iconcoords {491.0 336.0}
+    labelcoords {491.0 360.0}
     interface-peer {e0 n2}
     interface-peer {e1 n3}
     interface-peer {e2 n5}
@@ -272,8 +272,8 @@ node n14 {
 	!
     }
     canvas c1
-    iconcoords {118.0 391.0}
-    labelcoords {118.0 415.0}
+    iconcoords {358.0 476.0}
+    labelcoords {358.0 500.0}
     interface-peer {e0 n5}
     interface-peer {e1 n17}
     interface-peer {e2 n18}
@@ -286,8 +286,8 @@ node n15 {
 	!
     }
     canvas c1
-    iconcoords {351.0 378.0}
-    labelcoords {351.0 402.0}
+    iconcoords {505.0 464.0}
+    labelcoords {505.0 488.0}
     interface-peer {e0 n5}
     interface-peer {e1 n21}
 }
@@ -306,8 +306,8 @@ node n16 {
 	!
     }
     canvas c1
-    iconcoords {227.0 396.0}
-    labelcoords {227.0 428.0}
+    iconcoords {262.0 364.0}
+    labelcoords {262.0 396.0}
     interface-peer {eth0 n5}
     interface-peer {eth1 n19}
 }
@@ -323,8 +323,8 @@ node n17 {
 	!
     }
     canvas c1
-    iconcoords {44.0 480.0}
-    labelcoords {44.0 512.0}
+    iconcoords {238.0 535.0}
+    labelcoords {238.0 567.0}
     interface-peer {eth0 n14}
 }
 
@@ -339,8 +339,8 @@ node n18 {
 	!
     }
     canvas c1
-    iconcoords {141.0 518.0}
-    labelcoords {141.0 550.0}
+    iconcoords {407.0 554.0}
+    labelcoords {407.0 586.0}
     interface-peer {eth0 n14}
 }
 
@@ -370,8 +370,8 @@ node n19 {
 	}
     }
     canvas c1
-    iconcoords {222.0 473.0}
-    labelcoords {222.0 505.0}
+    iconcoords {155.0 401.0}
+    labelcoords {155.0 433.0}
     interface-peer {e0 n16}
     interface-peer {e1 n20}
 }
@@ -387,8 +387,8 @@ node n20 {
 	!
     }
     canvas c1
-    iconcoords {301.0 534.0}
-    labelcoords {301.0 566.0}
+    iconcoords {94.0 342.0}
+    labelcoords {94.0 374.0}
     interface-peer {eth0 n19}
 }
 
@@ -403,8 +403,8 @@ node n21 {
 	!
     }
     canvas c1
-    iconcoords {405.0 465.0}
-    labelcoords {405.0 497.0}
+    iconcoords {505.0 553.0}
+    labelcoords {505.0 585.0}
     interface-peer {eth0 n15}
 }
 
@@ -415,8 +415,8 @@ node n22 {
 	!
     }
     canvas c1
-    iconcoords {564.0 376.0}
-    labelcoords {564.0 400.0}
+    iconcoords {692.0 463.0}
+    labelcoords {692.0 487.0}
     interface-peer {e0 n4}
     interface-peer {e1 n25}
     interface-peer {e2 n26}
@@ -429,8 +429,8 @@ node n23 {
 	!
     }
     canvas c1
-    iconcoords {657.0 399.0}
-    labelcoords {657.0 423.0}
+    iconcoords {826.0 382.0}
+    labelcoords {826.0 406.0}
     interface-peer {e0 n4}
     interface-peer {e1 n27}
     interface-peer {e2 n28}
@@ -443,8 +443,8 @@ node n24 {
 	!
     }
     canvas c1
-    iconcoords {788.0 364.0}
-    labelcoords {788.0 388.0}
+    iconcoords {715.0 313.0}
+    labelcoords {715.0 337.0}
     interface-peer {e0 n4}
     interface-peer {e1 n29}
 }
@@ -460,8 +460,8 @@ node n25 {
 	!
     }
     canvas c1
-    iconcoords {468.0 430.0}
-    labelcoords {468.0 462.0}
+    iconcoords {622.0 545.0}
+    labelcoords {622.0 577.0}
     interface-peer {eth0 n22}
 }
 
@@ -476,8 +476,8 @@ node n26 {
 	!
     }
     canvas c1
-    iconcoords {563.0 480.0}
-    labelcoords {563.0 512.0}
+    iconcoords {762.0 531.0}
+    labelcoords {762.0 563.0}
     interface-peer {eth0 n22}
 }
 
@@ -492,8 +492,8 @@ node n27 {
 	!
     }
     canvas c1
-    iconcoords {630.0 499.0}
-    labelcoords {630.0 531.0}
+    iconcoords {844.0 510.0}
+    labelcoords {844.0 542.0}
     interface-peer {eth0 n23}
 }
 
@@ -508,8 +508,8 @@ node n28 {
 	!
     }
     canvas c1
-    iconcoords {737.0 509.0}
-    labelcoords {737.0 541.0}
+    iconcoords {940.0 444.0}
+    labelcoords {940.0 476.0}
     interface-peer {eth0 n23}
 }
 
@@ -524,8 +524,8 @@ node n29 {
 	!
     }
     canvas c1
-    iconcoords {791.0 450.0}
-    labelcoords {791.0 482.0}
+    iconcoords {879.0 303.0}
+    labelcoords {879.0 335.0}
     interface-peer {eth0 n24}
 }
 
@@ -668,6 +668,163 @@ link l28 {
 link l29 {
     nodes {n24 n29}
     bandwidth 0
+}
+
+annotation a1 {
+    iconcoords {419.0 11.0 851.0 119.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #cf7800
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a2 {
+    iconcoords {183.0 18.0 371.0 117.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #cf66ff
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a3 {
+    iconcoords {109.0 84.0 254.0 196.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #83cfff
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a4 {
+    iconcoords {183.0 115.0 879.0 275.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #5bcf8c
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a5 {
+    iconcoords {39.0 297.0 261.0 454.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #cfcf93
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a6 {
+    iconcoords {266.0 321.0 432.0 431.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #CFCFFF
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a7 {
+    iconcoords {173 408 465 577}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #d3a3e6
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a8 {
+    iconcoords {434.0 404.0 583.0 585.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #e8cf93
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a9 {
+    iconcoords {383.0 267.0 661.0 403.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    color #416456
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a10 {
+    iconcoords {644 251 919 381}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    color #c0ab33
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a11 {
+    iconcoords {752.0 374.0 976.0 545.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    color #cf6b70
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a12 {
+    iconcoords {544.0 379.0 809.0 606.0}
+    type oval
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    color #cfff7c
+    width 0
+    border black
+    canvas c1
 }
 
 canvas c1 {
