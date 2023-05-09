@@ -5,7 +5,7 @@ node n1 {
 	hostname R2
 	!
 	interface eth1
-	 ip address 10.0.3.1/24
+	 ip address 10.6.0.3/23
 	!
 	interface eth0
 	 ip address 10.0.2.2/24
@@ -16,6 +16,14 @@ node n1 {
     labelcoords {146.0 239.0}
     interface-peer {eth0 n6}
     interface-peer {eth1 n10}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth1 10.6.0.3/23', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n2 {
@@ -25,10 +33,10 @@ node n2 {
 	hostname R3
 	!
 	interface eth1
-	 ip address 10.0.4.1/24
+	 ip address 10.6.2.1/23
 	!
 	interface eth0
-	 ip address 10.0.3.2/24
+	 ip address 10.6.0.4/23
 	!
     }
     canvas c1
@@ -36,6 +44,14 @@ node n2 {
     labelcoords {358.0 304.0}
     interface-peer {eth0 n10}
     interface-peer {eth1 n13}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.0.4/23', 'ifconfig eth1 10.6.2.1/23', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n3 {
@@ -45,10 +61,10 @@ node n3 {
 	hostname R4
 	!
 	interface eth1
-	 ip address 10.0.4.2/24
+	 ip address 10.6.2.2/23
 	!
 	interface eth0
-	 ip address 10.0.3.3/24
+	 ip address 10.6.0.5/23
 	!
     }
     canvas c1
@@ -56,6 +72,14 @@ node n3 {
     labelcoords {635.0 304.0}
     interface-peer {eth0 n10}
     interface-peer {eth1 n13}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth1 10.6.2.2/23', 'ifconfig eth0 10.6.0.5/23', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n4 {
@@ -65,16 +89,16 @@ node n4 {
 	hostname R5
 	!
 	interface eth3
-	 ip address 10.0.11.1/24
+	 ip address 10.6.5.129/26
 	!
 	interface eth2
-	 ip address 10.0.10.1/24
+	 ip address 10.6.5.1/25
 	!
 	interface eth1
-	 ip address 10.0.9.1/24
+	 ip address 10.6.5.193/28
 	!
 	interface eth0
-	 ip address 10.0.4.4/24
+	 ip address 10.6.2.4/23
 	!
     }
     canvas c1
@@ -84,6 +108,14 @@ node n4 {
     interface-peer {eth1 n22}
     interface-peer {eth2 n23}
     interface-peer {eth3 n24}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.2.4/23', 'ifconfig eth1 10.6.5.193/28', 'ifconfig eth2 10.6.5.1/25', 'ifconfig eth3 10.6.5.129/26', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n5 {
@@ -93,16 +125,16 @@ node n5 {
 	hostname R6
 	!
 	interface eth3
-	 ip address 10.0.8.1/24
+	 ip address 10.6.4.193/27
 	!
 	interface eth2
-	 ip address 10.0.6.1/24
+	 ip address 10.6.4.225/30
 	!
 	interface eth1
-	 ip address 10.0.5.1/24
+	 ip address 10.6.4.129/26
 	!
 	interface eth0
-	 ip address 10.0.4.3/24
+	 ip address 10.6.2.3/23
 	!
     }
     canvas c1
@@ -112,6 +144,14 @@ node n5 {
     interface-peer {eth1 n14}
     interface-peer {eth2 n16}
     interface-peer {eth3 n15}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.2.3/23', 'ifconfig eth1 10.6.4.129/26', 'ifconfig eth2 10.6.4.225/30', 'ifconfig eth3 10.6.4.193/27', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n6 {
@@ -225,13 +265,21 @@ node n11 {
 	hostname Server1
 	!
 	interface eth0
-	 ip address 10.0.3.10/24
+	 ip address 10.6.0.1/23
 	!
     }
     canvas c1
     iconcoords {654.0 139.0}
     labelcoords {654.0 171.0}
     interface-peer {eth0 n10}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.0.1/23', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n12 {
@@ -241,13 +289,21 @@ node n12 {
 	hostname Server2
 	!
 	interface eth0
-	 ip address 10.0.3.11/24
+	 ip address 10.6.0.2/23
 	!
     }
     canvas c1
     iconcoords {715.0 204.0}
     labelcoords {715.0 236.0}
     interface-peer {eth0 n10}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.0.2/23', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n13 {
@@ -299,10 +355,10 @@ node n16 {
 	hostname R7
 	!
 	interface eth1
-	 ip address 10.0.7.1/32
+	 ip address 10.6.4.1/25
 	!
 	interface eth0
-	 ip address 10.0.6.2/24
+	 ip address 10.6.4.226/30
 	!
     }
     canvas c1
@@ -310,6 +366,14 @@ node n16 {
     labelcoords {262.0 396.0}
     interface-peer {eth0 n5}
     interface-peer {eth1 n19}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.4.226/30', 'ifconfig eth1 10.6.4.1/25', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n17 {
@@ -319,13 +383,21 @@ node n17 {
 	hostname PC1
 	!
 	interface eth0
-	 ip address 10.0.5.20/24
+	 ip address 10.6.4.130/26
 	!
     }
     canvas c1
     iconcoords {238.0 535.0}
     labelcoords {238.0 567.0}
     interface-peer {eth0 n14}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.4.130/26', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n18 {
@@ -335,13 +407,21 @@ node n18 {
 	hostname PC2
 	!
 	interface eth0
-	 ip address 10.0.5.21/24
+	 ip address 10.6.4.131/26
 	!
     }
     canvas c1
-    iconcoords {407.0 554.0}
-    labelcoords {407.0 586.0}
+    iconcoords {398.0 567.0}
+    labelcoords {398.0 599.0}
     interface-peer {eth0 n14}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.4.131/26', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n19 {
@@ -383,13 +463,21 @@ node n20 {
 	hostname PC3
 	!
 	interface eth0
-	 ip address 10.0.7.20/32
+	 ip address 10.6.4.1/25
 	!
     }
     canvas c1
     iconcoords {94.0 342.0}
     labelcoords {94.0 374.0}
     interface-peer {eth0 n19}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.4.1/25', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n21 {
@@ -399,13 +487,21 @@ node n21 {
 	hostname Server-A
 	!
 	interface eth0
-	 ip address 10.0.8.10/24
+	 ip address 10.6.4.194/27
 	!
     }
     canvas c1
-    iconcoords {505.0 553.0}
-    labelcoords {505.0 585.0}
+    iconcoords {508.0 565.0}
+    labelcoords {508.0 597.0}
     interface-peer {eth0 n15}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.4.194/28', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n22 {
@@ -456,13 +552,21 @@ node n25 {
 	hostname PC4
 	!
 	interface eth0
-	 ip address 10.0.9.20/24
+	 ip address 10.6.5.194/28
 	!
     }
     canvas c1
-    iconcoords {622.0 545.0}
-    labelcoords {622.0 577.0}
+    iconcoords {604.0 550.0}
+    labelcoords {604.0 582.0}
     interface-peer {eth0 n22}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.5.194/28', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n26 {
@@ -472,13 +576,21 @@ node n26 {
 	hostname PC5
 	!
 	interface eth0
-	 ip address 10.0.9.21/24
+	 ip address 10.6.5.195/28
 	!
     }
     canvas c1
-    iconcoords {762.0 531.0}
-    labelcoords {762.0 563.0}
+    iconcoords {761.0 533.0}
+    labelcoords {761.0 565.0}
     interface-peer {eth0 n22}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.5.195/28', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n27 {
@@ -488,13 +600,21 @@ node n27 {
 	hostname PC6
 	!
 	interface eth0
-	 ip address 10.0.10.20/24
+	 ip address 10.6.5.2/25
 	!
     }
     canvas c1
     iconcoords {844.0 510.0}
     labelcoords {844.0 542.0}
     interface-peer {eth0 n23}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.5.2/24', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n28 {
@@ -504,13 +624,21 @@ node n28 {
 	hostname PC7
 	!
 	interface eth0
-	 ip address 10.0.10.21/24
+	 ip address 10.6.5.3/25
 	!
     }
     canvas c1
     iconcoords {940.0 444.0}
     labelcoords {940.0 476.0}
     interface-peer {eth0 n23}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.5.3/25', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 node n29 {
@@ -520,13 +648,21 @@ node n29 {
 	hostname Server-B
 	!
 	interface eth0
-	 ip address 10.0.11.10/24
+	 ip address 10.6.5.130/26
 	!
     }
     canvas c1
-    iconcoords {879.0 303.0}
-    labelcoords {879.0 335.0}
+    iconcoords {879.0 312.0}
+    labelcoords {879.0 344.0}
     interface-peer {eth0 n24}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	cmdup=('ifconfig eth0 10.6.5.130/26', )
+	}
+    }
+    services {DefaultRoute UserDefined}
 }
 
 link l1 {
@@ -710,7 +846,7 @@ annotation a3 {
 }
 
 annotation a4 {
-    iconcoords {183.0 115.0 879.0 275.0}
+    iconcoords {183.0 115.0 855.0 275.0}
     type oval
     label {}
     labelcolor black
@@ -749,7 +885,7 @@ annotation a6 {
 }
 
 annotation a7 {
-    iconcoords {173 408 465 577}
+    iconcoords {157 419 451 590}
     type oval
     label {}
     labelcolor black
@@ -762,7 +898,7 @@ annotation a7 {
 }
 
 annotation a8 {
-    iconcoords {434.0 404.0 583.0 585.0}
+    iconcoords {423 400 574 609}
     type oval
     label {}
     labelcolor black
@@ -780,7 +916,7 @@ annotation a9 {
     label {}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #416456
     width 0
     border black
@@ -793,7 +929,7 @@ annotation a10 {
     label {}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #c0ab33
     width 0
     border black
@@ -807,7 +943,7 @@ annotation a11 {
     label {}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #cf6b70
     width 0
     border black
@@ -820,10 +956,114 @@ annotation a12 {
     label {}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     color #cfff7c
     width 0
     border black
+    canvas c1
+}
+
+annotation a13 {
+    iconcoords {459.0 304.0}
+    type text
+    label {10.6.2.0/23}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a14 {
+    type text
+    iconcoords {511.0 307.0}
+    label {}
+    canvas c1
+}
+
+annotation a15 {
+    iconcoords {337.0 171.0}
+    type text
+    label {10.6.0.0/23}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a16 {
+    iconcoords {735.0 277.0}
+    type text
+    label {10.6.5.128/26}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a17 {
+    iconcoords {570.0 456.0}
+    type text
+    label {10.6.5.192/28}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a18 {
+    iconcoords {754.0 450.0}
+    type text
+    label {10.6.5.0/25}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a19 {
+    iconcoords {120.0 323.0}
+    type text
+    label {10.6.4.0/25}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a20 {
+    iconcoords {174.0 479.0}
+    type text
+    label {10.6.4.128/26}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a21 {
+    iconcoords {460.0 507.0}
+    type text
+    label {10.6.4.192/27}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a22 {
+    iconcoords {293.0 343.0}
+    type text
+    label {10.6.4.224/30}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize 12
+    canvas c1
+}
+
+annotation a23 {
+    type text
+    iconcoords {486.0 156.0}
+    label {}
     canvas c1
 }
 
