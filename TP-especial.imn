@@ -23,7 +23,7 @@ node n1 {
 	cmdup=('ip addr add 10.6.0.3/23 dev eth1', 'ip addr add 201.0.1.1/24 dev eth0', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n2 {
@@ -51,7 +51,7 @@ node n2 {
 	cmdup=('ip addr add 10.6.0.4/23 dev eth0', 'ip addr add 10.6.2.1/23 dev eth1', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n3 {
@@ -79,7 +79,7 @@ node n3 {
 	cmdup=('ip addr add 10.6.0.5/23 dev eth0', 'ip addr add 10.6.2.2/23 dev eth1', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n4 {
@@ -115,7 +115,7 @@ node n4 {
 	cmdup=('ip addr add 10.6.2.4/23 dev eth0', 'ip addr add 10.6.5.193/28 dev eth1', 'ip addr add 10.6.5.1/25 dev eth2', 'ip addr add 10.6.5.129/26 dev eth3', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n5 {
@@ -151,7 +151,7 @@ node n5 {
 	cmdup=('ip addr add 10.6.2.3/23 dev eth0', 'ip addr add 10.6.4.129/26 dev eth1', 'ip addr add 10.6.4.225/30 dev eth2', 'ip addr add 10.6.4.193/27 dev eth3', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n6 {
@@ -397,7 +397,7 @@ node n16 {
 	cmdup=('ip addr add 10.6.4.226/30 dev eth0', 'ip addr add 10.6.4.1/25 dev eth1', )
 	}
     }
-    services {DefaultRoute UserDefined}
+    services {IPForward UserDefined}
 }
 
 node n17 {
@@ -1097,7 +1097,7 @@ annotation a24 {
     label {201.0.1.0/24}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     canvas c1
 }
 
@@ -1107,7 +1107,7 @@ annotation a25 {
     label {201.0.2.0/24}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     canvas c1
 }
 
@@ -1117,7 +1117,7 @@ annotation a26 {
     label {192.168.10.0/24}
     labelcolor black
     fontfamily {Arial}
-    fontsize 12
+    fontsize {12}
     canvas c1
 }
 
