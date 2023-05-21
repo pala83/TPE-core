@@ -487,18 +487,18 @@ node n20 {
 	hostname PC3
 	!
 	interface eth0
-	 ip address 10.6.4.1/25
+	 ip address 10.6.4.2/25
 	!
     }
     canvas c1
-    iconcoords {86.0 347.0}
-    labelcoords {86.0 379.0}
+    iconcoords {85.0 347.0}
+    labelcoords {85.0 379.0}
     interface-peer {eth0 n19}
     custom-config {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 10.6.4.1/25 dev eth0', )
+	cmdup=('ip addr add 10.6.4.2/25 dev eth0', )
 	}
     }
     services {DefaultRoute UserDefined}
