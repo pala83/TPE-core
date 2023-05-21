@@ -189,7 +189,7 @@ node n7 {
 	hostname R8
 	!
 	interface eth0
-	 ip address 192.168.10.1/24
+	 ip address 192.168.10.2/24
 	!
 	interface eth1
 	 ip address 201.0.2.2/24
@@ -204,7 +204,7 @@ node n7 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 192.168.10.1/24 dev eth0', 'ip addr add 201.0.2.2/24 dev eth1', )
+	cmdup=('ip addr add 192.168.10.2/24 dev eth0', 'ip addr add 201.0.2.2/24 dev eth1', )
 	}
     }
     services {IPForward UserDefined}
@@ -217,12 +217,12 @@ node n8 {
 	hostname Casa-jefe
 	!
 	interface eth0
-	 ip address 192.168.10.2/24
+	 ip address 192.168.10.1/24
 	!
     }
     canvas c1
-    iconcoords {773.0 67.0}
-    labelcoords {773.0 99.0}
+    iconcoords {812.0 67.0}
+    labelcoords {812.0 99.0}
     interface-peer {eth0 n9}
     custom-config {
 	custom-config-id service:UserDefined
@@ -252,7 +252,7 @@ node n9 {
 	custom-config-id basic_range
 	custom-command {3 3 9 9 9}
 	config {
-	range=275
+	range=1000
 	bandwidth=54000000
 	jitter=0
 	delay=20000
@@ -260,8 +260,8 @@ node n9 {
 	}
     }
     canvas c1
-    iconcoords {575.0 66.0}
-    labelcoords {575.0 98.0}
+    iconcoords {600.0 68.0}
+    labelcoords {600.0 100.0}
     interface-peer {e0 n7}
     interface-peer {e1 n8}
 }
@@ -435,8 +435,8 @@ node n18 {
 	!
     }
     canvas c1
-    iconcoords {386.0 544.0}
-    labelcoords {386.0 576.0}
+    iconcoords {376.0 558.0}
+    labelcoords {376.0 590.0}
     interface-peer {eth0 n14}
     custom-config {
 	custom-config-id service:UserDefined
@@ -466,7 +466,7 @@ node n19 {
 	custom-config-id basic_range
 	custom-command {3 3 9 9 9}
 	config {
-	range=275
+	range=500
 	bandwidth=54000000
 	jitter=0
 	delay=20000
@@ -549,8 +549,8 @@ node n23 {
 	!
     }
     canvas c1
-    iconcoords {826.0 382.0}
-    labelcoords {826.0 406.0}
+    iconcoords {819.0 394.0}
+    labelcoords {819.0 418.0}
     interface-peer {e0 n4}
     interface-peer {e1 n27}
     interface-peer {e2 n28}
@@ -870,7 +870,7 @@ annotation a3 {
 }
 
 annotation a4 {
-    iconcoords {183.0 115.0 855.0 275.0}
+    iconcoords {183.0 115.0 855.0 281.0}
     type oval
     label {}
     labelcolor black
@@ -896,7 +896,7 @@ annotation a5 {
 }
 
 annotation a6 {
-    iconcoords {248.0 321.0 432.0 441.0}
+    iconcoords {256.0 324.0 434.0 440.0}
     type oval
     label {}
     labelcolor black
@@ -909,7 +909,7 @@ annotation a6 {
 }
 
 annotation a7 {
-    iconcoords {157 419 451 590}
+    iconcoords {151 391 449 607}
     type oval
     label {}
     labelcolor black
@@ -922,7 +922,7 @@ annotation a7 {
 }
 
 annotation a8 {
-    iconcoords {423 400 574 609}
+    iconcoords {412 395 571 612}
     type oval
     label {}
     labelcolor black
@@ -935,7 +935,7 @@ annotation a8 {
 }
 
 annotation a9 {
-    iconcoords {383.0 267.0 661.0 403.0}
+    iconcoords {351.0 257.0 662.0 411.0}
     type oval
     label {}
     labelcolor black
@@ -988,7 +988,7 @@ annotation a12 {
 }
 
 annotation a13 {
-    iconcoords {459.0 304.0}
+    iconcoords {567.0 331.0}
     type text
     label {10.6.2.0/23}
     labelcolor black
