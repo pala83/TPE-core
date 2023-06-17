@@ -20,7 +20,7 @@ node n1 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 10.6.0.3/23 dev eth1', 'ip addr add 201.0.1.1/24 dev eth0', 'ip route add 10.6.0.0/21 via 10.6.0.4 dev eth1', 'ip route add default via 201.0.1.2 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.2.0/23 -j DROP', 'iptables -t nat -A POSTROUTING -s 10.6.0.0/16 -j MASQUERADE', 'iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.6.0.1:8080', )
+	cmdup=('ip addr add 10.6.0.3/23 dev eth1', 'ip addr add 201.0.1.1/24 dev eth0', 'ip route add 10.6.0.0/21 via 10.6.0.4 dev eth1', 'ip route add default via 201.0.1.2 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.2.0/23 -j DROP', 'iptables -t nat -A POSTROUTING -s 10.6.0.0/16 -o eth0 -j MASQUERADE', 'iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.6.0.1:8080', )
 	}
     }
     services {IPForward UserDefined}
@@ -411,8 +411,8 @@ node n17 {
 	!
     }
     canvas c1
-    iconcoords {208.0 532.0}
-    labelcoords {208.0 564.0}
+    iconcoords {208.0 531.0}
+    labelcoords {208.0 563.0}
     interface-peer {eth0 n14}
     custom-config {
 	custom-config-id service:UserDefined
