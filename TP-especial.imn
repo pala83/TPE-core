@@ -20,7 +20,7 @@ node n1 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 10.6.0.3/23 dev eth1', 'ip addr add 201.0.1.1/24 dev eth0', 'ip route add 10.6.0.0/21 via 10.6.0.4 dev eth1', 'ip route add default via 201.0.1.2 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.2.0/23 -j DROP', 'iptables -t nat -A POSTROUTING -s 10.6.0.0/16 -o eth0 -j MASQUERADE', 'iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.6.0.1:8080', )
+	cmdup=('ip addr add 10.6.0.3/23 dev eth1', 'ip addr add 201.0.1.1/24 dev eth0', 'ip route add default via 201.0.1.2 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.0.0/23 -j ACCEPT', 'iptables -t filter -A FORWARD -s 10.6.5.0/24 -j ACCEPT', 'iptables -t filter -A FORWARD -s 10.6.4.0/24 -j ACCEPT', 'iptables -t nat -A POSTROUTING -s 10.6.0.0/16 -o eth0 -j MASQUERADE', 'iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.6.0.1:8080', 'ip route add 10.6.4.0/23 via 10.6.0.4 dev eth1', 'ip route add 10.6.6.0/23 via 10.6.0.5 dev eth1', 'iptables -t filter -A FORWARD -s 10.6.0.0/16 -j DROP', )
 	}
     }
     services {IPForward UserDefined}
@@ -48,7 +48,7 @@ node n2 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 10.6.0.4/23 dev eth0', 'ip addr add 10.6.2.1/23 dev eth1', 'ip route add 10.6.4.0/24 via 10.6.2.3 dev eth1', 'ip route add 10.6.5.0/24 via 10.6.2.4 dev eth1', 'ip route add default via 10.6.0.3 dev eth0', )
+	cmdup=('ip addr add 10.6.0.4/23 dev eth0', 'ip addr add 10.6.2.1/23 dev eth1', 'ip route add 10.6.4.0/24 via 10.6.2.3 dev eth1', 'ip route add 10.6.5.0/24 via 10.6.2.4 dev eth1', 'ip route add default via 10.6.0.3 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.5.0/24 -d 10.6.0.0/23 -j DROP', 'iptables -t filter -A FORWARD -s 10.6.4.0/24 -d 10.6.0.0/23 -j DROP', 'iptables -t filter -A FORWARD -s 10.6.5.0/24 -j ACCEPT', 'iptables -t filter -A FORWARD -s 10.6.4.0/24 -j ACCEPT', )
 	}
     }
     services {IPForward UserDefined}
@@ -76,7 +76,7 @@ node n3 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 10.6.0.5/23 dev eth0', 'ip addr add 10.6.2.2/23 dev eth1', 'ip route add 10.6.4.0/24 via 10.6.2.3 dev eth1', 'ip route add 10.6.5.0/24 via 10.6.2.3 dev eth1', 'ip route add default via 10.6.0.3 dev eth0', )
+	cmdup=('ip addr add 10.6.0.5/23 dev eth0', 'ip addr add 10.6.2.2/23 dev eth1', 'ip route add 10.6.4.0/24 via 10.6.2.3 dev eth1', 'ip route add 10.6.5.0/24 via 10.6.2.3 dev eth1', 'ip route add default via 10.6.0.3 dev eth0', 'iptables -t filter -A FORWARD -s 10.6.4.0/24 -d 10.6.0.0/23 -j ACCEPT', 'iptables -t filter -A FORWARD -s 10.6.5.0/24 -d 10.6.0.0/23 -j ACCEPT', 'iptables -t filter -A FORWARD -s 10.6.4.0/24 -j DROP', 'iptables -t filter -A FORWARD -s 10.6.5.0/24 -j DROP', )
 	}
     }
     services {IPForward UserDefined}
@@ -204,7 +204,7 @@ node n7 {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
-	cmdup=('ip addr add 192.168.10.2/24 dev eth0', 'ip addr add 201.0.2.2/24 dev eth1', 'ip route add default via 201.0.2.1 dev eth1', 'iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -j MASQUERADE', )
+	cmdup=('ip addr add 192.168.10.2/24 dev eth0', 'ip addr add 201.0.2.2/24 dev eth1', 'ip route add default via 201.0.2.1 dev eth1', 'iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -o eth1 -j MASQUERADE', )
 	}
     }
     services {IPForward UserDefined}
